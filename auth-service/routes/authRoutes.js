@@ -82,7 +82,14 @@ router.post("/login", async (req, res) => {
       }
     });
   } catch (err) {
-    res.status(500).json({ message: "Server error.", error: err.message });
+    console.error("AUTH ERROR:", err);
+
+res.status(500).json({
+  message: "Server error.",
+  error: err.message,
+  code: err.code,
+  detail: err.detail
+});
   }
 });
 
