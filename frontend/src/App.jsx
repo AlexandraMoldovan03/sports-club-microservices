@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./index.css";
-
-const AUTH_URL = "http://localhost:4001/api/auth";
-const CLUB_URL = "http://localhost:4002/api/clubs";
-const BOOKING_URL = "http://localhost:4003/api/bookings";
-const NOTIFICATION_URL = "http://localhost:4004/api/notifications";
-
+const AUTH_URL = "https://auth-service-pixw.onrender.com/api/auth";
+const CLUB_URL = "https://club-servicee.onrender.com/api/clubs";
+const BOOKING_URL = "https://booking-service-wnh0.onrender.com/api/bookings";
+const NOTIFICATION_URL = "https://notification-service-8zy2.onrender.com/api/notifications";
 function App() {
   const [user, setUser] = useState(null);
   const [clubs, setClubs] = useState([]);
